@@ -11,7 +11,7 @@ export const Favourites = () => {
   const router = useRouter();
 
   const handleBackToHome = () => {
-    router.push("/"); //роутинг
+    router.push("/"); // роутинг
   };
 
   return (

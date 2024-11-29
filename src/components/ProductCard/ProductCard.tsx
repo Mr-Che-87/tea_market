@@ -105,7 +105,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, loading }) => {
             variant="h2"
             sx={{
               textTransform: "uppercase",
-              fontSize: "24px",
+              fontSize: "25px",
               fontWeight: "bold",
               color: "var(--green-color)",
               textAlign: "center",
