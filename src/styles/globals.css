@@ -1,0 +1,53 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --white-color: rgba(255, 255, 255, 1);
+  --green-color: #3e6546;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-roboto-reg), sans-serif, Arial, Helvetica;
+  max-width: 100vw;
+  height: 160vh;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: var(--font-roboto-bold), sans-serif, Arial, Helvetica;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+h2 {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+button, select {
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  text-decoration: none;
+}
+button {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+

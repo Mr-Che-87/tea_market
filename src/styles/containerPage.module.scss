@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 20px auto;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.212);
+  background: var(--white-color);
+}
+
+//для входной анимации:
+.containerAnimation {
+  opacity: 0; 
+  transform: translateX(-100%); 
+  animation: slideIn 0.5s forwards; 
+}
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
