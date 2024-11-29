@@ -10,6 +10,7 @@ export async function GET() {
     const products = getProducts(); 
     return NextResponse.json({ products });
   } catch (error) {
+    console.error("Error API", error);
     return NextResponse.error();
   }
 }

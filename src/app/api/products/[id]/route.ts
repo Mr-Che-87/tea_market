@@ -16,6 +16,7 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
 
     return NextResponse.json({ product });
   } catch (error) {
+    console.error("Error API", error);
     return NextResponse.error();
   }
 }
