@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ProductCardPage({ params }: { params: { id: string } }) {
-  const res = await fetch(`http://localhost:3000/api/products/${params.id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products/${params.id}`, {
     cache: "no-store"  
   });
 

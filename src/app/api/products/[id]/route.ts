@@ -1,9 +1,12 @@
 import { NextResponse } from "next/server";
-import mockData from "../../../../../public/mock.json";
+import { IProduct } from "@/types/IProduct";
 import { cache } from "react";
 
-const getProductById = cache((id: number) => {  //кэшируем запрос к мок-БД
-  return mockData.products.find((p) => p.id === id);
+const getProductById = cache(async (id: number) => { //кэшируем запрос к мок-БД
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/mock.json`);
+  if (!res.ok) throw new Error("Failed to fetch mock data");
+  const data = await res.json();
+  return data.products.find((p: IProduct) => p.id === id);
 });
 
 export async function GET(req: Request, { params }: { params: { id: string } }) {

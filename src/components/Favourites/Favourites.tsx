@@ -28,7 +28,7 @@ export const Favourites = () => {
       </div>
 
       {favourites.length === 0 ? (
-        <div>Нет товаров в избранном</div>
+        <div className={styles.infoMessage}>Нет товаров в избранном</div>
       ) : (
         <div className={styles.productsContainer}>
         {favourites.map((product) => (

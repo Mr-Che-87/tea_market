@@ -94,7 +94,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, loading }) => {
         </Button>
       </Box>
 
-      {/* Content */}
       {loading ? (
         <Box sx={{ textAlign: "center", padding: "10px" }}>
           <CircularProgress size={24} />
@@ -142,17 +141,20 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, loading }) => {
               onClick={handleToggleFavourite}
               disableRipple
               sx={{
-                fontSize: "50px",
                 marginLeft: "20px",
-                backgroundColor: "transparent", // Убираем фон
+                backgroundColor: "transparent", 
                 color: isFavourite ? "gold" : "gray",
                 "&:hover": {
-                backgroundColor: "transparent", // Оставляем прозрачным на hover
+                backgroundColor: "transparent", 
                 color: "gold",
                 },
               }}
             >
-            {isFavourite ? <StarIcon /> : <StarBorderIcon />}
+              {isFavourite ? (
+                  <StarIcon sx={{ fontSize: "40px" }} /> 
+                ) : (
+                  <StarBorderIcon sx={{ fontSize: "40px" }} /> 
+                )}
             </IconButton>
           </Box>
           <Typography
