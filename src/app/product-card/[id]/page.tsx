@@ -9,9 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ProductCardPage({ params }: { params: { id: string } }) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products/${params.id}`, {
-    cache: "no-store"  
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products/${params.id}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch products");
